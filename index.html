@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Royal Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="envelope-page">
+
+<audio id="bg-music" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="envelope-wrapper" onclick="openEnvelope()">
+
+  <div class="envelope">
+    <div class="flap"></div>
+    <div class="body"></div>
+    <div class="seal">❖</div>
+  </div>
+
+  <img src="assets/pm-logo.png" class="logo">
+  <p class="tap">TAP TO OPEN</p>
+
+</div>
+
+<script>
+function openEnvelope() {
+  const music = document.getElementById("bg-music");
+
+  document.querySelector(".envelope").classList.add("open");
+  document.querySelector(".logo").classList.add("fade");
+  document.querySelector(".tap").classList.add("fade");
+
+  if (music.paused) {
+    music.volume = 0;
+    music.play();
+
+    let v = 0;
+    const fade = setInterval(() => {
+      if (v < 1) {
+        v += 0.05;
+        music.volume = v;
+      } else {
+        clearInterval(fade);
+      }
+    }, 150);
+  }
+
+  setTimeout(() => {
+    window.location.href = "invite.html";
+  }, 1400);
+}
+</script>
+
+</body>
+</html>
