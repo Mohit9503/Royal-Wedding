@@ -23,6 +23,13 @@ body::before {
   pointer-events: none;
 }
 
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  background: #fffaf7;
+  color: #4b2e2e;
+}
+
 /* ENVELOPE */
 .envelope-page {
   display: flex;
@@ -151,36 +158,3 @@ a {
 html {
   scroll-behavior: smooth;
   }
-
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Georgia', serif;
-}
-
-body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  background: #fffaf7;
-  color: #4b2e2e;
-}
-
-/* FULL SCREEN SECTIONS */
-section {
-  min-height: 100vh;
-  scroll-snap-align: start;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 20px;
-  text-align: center;
-
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
