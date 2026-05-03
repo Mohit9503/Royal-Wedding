@@ -1,0 +1,148 @@
+:root {
+  --green: #0b3d2e;
+  --dark: #061b14;
+  --gold: #d4af37;
+  --ivory: #f8f3e7;
+}
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: radial-gradient(circle at top, var(--green), var(--dark));
+  color: var(--ivory);
+}
+
+/* TEXTURE */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+/* ENVELOPE */
+.envelope-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.envelope-wrapper {
+  cursor: pointer;
+}
+
+.envelope {
+  width: 260px;
+  height: 160px;
+  background: linear-gradient(145deg, #3b0a0a, #1a0000);
+  border: 2px solid var(--gold);
+  position: relative;
+  box-shadow: 0 0 40px rgba(212,175,55,0.2);
+  overflow: hidden;
+}
+
+.flap {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, var(--gold), #b8860b);
+  transform-origin: top;
+  transition: 1s;
+  z-index: 3;
+}
+
+.body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,40,30,0.9);
+}
+
+.seal {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.logo {
+  width: 110px;
+  margin-top: 20px;
+}
+
+.tap {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.fade {
+  opacity: 0;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+
+.names {
+  font-size: 32px;
+}
+
+.ring {
+  width: 40px;
+}
+
+/* DIVIDER */
+.divider {
+  text-align: center;
+  color: var(--gold);
+  margin: 40px 0;
+}
+
+/* SECTIONS */
+section {
+  max-width: 750px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+/* COUNTDOWN */
+#countdown {
+  font-size: 26px;
+  color: var(--gold);
+}
+
+/* VENUE */
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* RSVP */
+.family {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.footer-note,
+.footer-names {
+  font-style: italic;
+}
