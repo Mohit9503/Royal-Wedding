@@ -146,8 +146,3 @@ a {
 .footer-names {
   font-style: italic;
 }
-
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
-  }
