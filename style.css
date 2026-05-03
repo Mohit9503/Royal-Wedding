@@ -23,13 +23,6 @@ body::before {
   pointer-events: none;
 }
 
-body {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  background: #fffaf7;
-  color: #4b2e2e;
-}
-
 /* ENVELOPE */
 .envelope-page {
   display: flex;
